@@ -1,0 +1,31 @@
+COMO ARMAR Y COMPARTIR TODOS LOS ARCHIVOS - ASMI
+==============================================
+1. DESCOMPRIMIR:
+   - Este ZIP -> te queda carpeta ASMI/
+
+2. XAMPP:
+   - Copiar carpeta ASMI a C:/xampp/htdocs/
+   - Abrir XAMPP Control Panel -> Start Apache + MySQL
+
+3. BASE DE DATOS:
+   - Entrar a http://localhost/phpmyadmin
+   - Click Nueva -> Crear base asmi_medical (utf8mb4_unicode_ci)
+   - Click Importar -> Elegir archivo ASMI/db/asmi.sql
+   - Dar Continuar (tarda 10 seg, son 7776 personal + 980 pacientes)
+   - Si da error por tamaño: en XAMPP Shell ejecutar:
+     mysql -u root asmi_medical < C:/xampp/htdocs/ASMI/db/asmi.sql
+
+4. VER SISTEMA:
+   - http://localhost/ASMI/index.html
+
+5. COMPARTIR:
+   - El ZIP ya esta listo para enviar por WhatsApp / Drive
+   - Contiene: index.html + db/asmi.sql + php/
+
+ARCHIVOS INCLUIDOS:
+- index.html (3.7MB) = tu portal original corregido
+  * Textbox "Escribe tu NSS"
+  * Anti-doble-cita (no deja agendar 10:30 dos veces)
+  * PDF con logo separado (no amontonado)
+- db/asmi.sql (2.3MB) = 980 pacientes + 7776 personal + hospitales completos
+- php/config.php + api.php
